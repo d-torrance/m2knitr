@@ -1,5 +1,5 @@
 eng_m2 <- function(options) {
-  cmd <- knitr:::get_engine_path(options$engine.path, "M2")
+  cmd <- knitr:::get_engine_path(options$engine.path, options$engine, "M2")
   opts <- knitr:::get_engine_opts(options$engine.opts, options$engine)
   m2file <- tempfile(fileext = ".m2")
   writeLines(options$code, m2file)
